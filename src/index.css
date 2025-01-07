@@ -1,0 +1,88 @@
+:root {
+  --dark-blue: hsl(243, 81%, 20%);
+  --white: hsl(0, 0%, 100%);
+  --grey-1: hsl(0, 0%, 95%);
+  --grey-2: hsl(0, 0%, 85%);
+  --grey-3: hsl(0, 0%, 67%);
+  --grey-4: hsl(0, 0%, 47%);
+  --grey-5: hsl(0, 0%, 39%);
+  --grey-6: hsl(0, 0%, 33%);
+  --grey-7: hsl(0, 0%, 22%);
+  --black: hsl(0, 0%, 0%);
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+html {
+  /* scroll-behavior: smooth; */
+}
+html, body, #root {
+  /* overflow-x: hidden; */
+  height: 100%;
+  font-size: 16px;
+}
+
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen-section {
+  height: 100vh;
+  display: flex;
+  padding: 1.25rem;
+  padding-top: 8.5rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: var(--white);
+  width: 100%;
+  color: var(--grey-5);
+  padding: 1rem;
+  z-index: 10;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px hsla(0, 0%, 33%, 0.25);
+  font-weight: var(--font-medium);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+.company-name {
+  color: var(--dark-blue);
+  font-size: 1.25rem;
+  font-weight: var(--font-bold);
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar ul .active {
+  color: var(--dark-blue);
+}
+.navbar.scrolled {
+  background-color: var(--grey-1);
+  box-shadow: 0 2px 10px hsla(0, 0, 33%, 0.25);
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer {
+  width: 100%;
+}
+.f-socials li {
+  list-style: none;
+}
