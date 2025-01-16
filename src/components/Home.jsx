@@ -1,4 +1,4 @@
-import blueGTR from "../assets/blue-gtr.jpg";
+import greenBMW from "../assets/green-bmw.jpg";
 
 function Home() {
 
@@ -7,13 +7,13 @@ function Home() {
       <div className="home-info">
         <h1>Rent <span id="elegance">Elegance.</span><br />Drive <span id="power">Power.</span></h1>
         <div className="home-desc">
-          <p>At VDrive, we offer <span>200+</span> luxury vehicles.</p>
+          <p>At VDrive, we offer 200+ luxury vehicles.</p>
           <p>Explore our extensive fleet today.</p>
+          <button>Browse Our Fleet</button>
         </div>
-        <button>Browse Our Fleet</button>
       </div>
       <div className="home-img-container">
-        <img className="blue-gtr" src={blueGTR} alt="Blue GTR" />
+        <img className="home-img" src={greenBMW} alt="Green BMW Background Image" />
       </div>
     </div>
   );

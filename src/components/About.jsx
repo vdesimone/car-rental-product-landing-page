@@ -1,4 +1,5 @@
 import 'remixicon/fonts/remixicon.css';
+import whiteSUV from "../assets/white-suv.jpg";
 
 function About() {
   const stats = [
@@ -29,7 +30,19 @@ function About() {
   return(
     <div id="about" className="full-screen-section">
       <div className="about-section">
-        <h2>We offer <span>premium services</span> found <br />nowhere else</h2>
+        <div className="about-content-container">
+          <div className="about-desc">
+            <h2>About Us</h2>
+            <p>
+            At <span>VDrive</span>, we believe driving should be
+            an <span>experience</span> - <br />one that&apos;s synonymous with
+            luxury, performance, and freedom.
+            </p>
+          </div>
+          <div className="about-img-container">
+            <img className="about-img" src={whiteSUV} alt="White SUV background" />
+          </div>
+        </div>
         <div className="about-stats">
           {stats.map((stat) => {
             const lastStat = stats[stats.length - 1];
@@ -51,13 +64,6 @@ function About() {
               stat != lastStat && <div className="vl" key={`vl-${stat.id}`}></div>
             ];
           })}
-        </div>
-        <div className="about-desc">
-          <p>
-            At <span>VDrive</span>, we believe driving should be
-            an <span>experience</span>- <br />one that&apos;s synonymous with
-            luxury, performance, and freedom.
-          </p>
         </div>
         <button>Learn More</button>
       </div>
