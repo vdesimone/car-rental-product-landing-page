@@ -1,5 +1,5 @@
 import 'remixicon/fonts/remixicon.css';
-import whiteSUV from "../assets/white-suv.jpg";
+import aboutImg from "../assets/otherImages/about-page.jpg";
 
 function About() {
   const stats = [
@@ -40,7 +40,7 @@ function About() {
             </p>
           </div>
           <div className="about-img-container">
-            <img className="about-img" src={whiteSUV} alt="White SUV background" />
+            <img className="about-img" src={aboutImg} alt="White SUV background" />
           </div>
         </div>
         <div className="about-stats">
