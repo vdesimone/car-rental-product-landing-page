@@ -287,7 +287,7 @@ html, body, #root {
   border-left: 1px solid var(--grey-6);
   border-bottom: 1px solid var(--grey-6);
   border-top: 1px solid var(--grey-6);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .fleet-section .car-categories button:last-of-type {
   border-right: 1px solid var(--grey-6);
@@ -432,12 +432,85 @@ html, body, #root {
 }
 
 
-
-.faq-section {
+#faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  height: 100%;
+}
+.faq-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: var(--font-bold);
+  font-size: 3rem;
+  color: var(--grey-7);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.questions {
+  max-width: 800px;
+  width: 100%;
+}
+.question {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.question-header {
+  display: flex;
+  justify-content: space-between;
+}
+.question h3 {
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+  color: var(--dark-blue);
+}
+.question h3:hover {
+  cursor: pointer;
+}
+.question i {
+  cursor: pointer;
+}
+.question i.ri-add-circle-fill {
+  color: var(--grey-7);
+}
+.question i.ri-indeterminate-circle-fill {
+  color: var(--dark-blue);
+}
+.question p {
+  font-size: 1rem;
+  font-weight: var(--font-normal);
+  color: var(--grey-5);
+}
+.question span {
+  font-size: 1.625rem;
+  margin-left: 1rem;
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.18s;
+}
+.answer.show {
+  max-height: 200px;
+  overflow: clip;
+  transition: max-height 0.3s ease-out;
+}
+.answer p {
+  margin-top: 1rem;
+}
+.solid {
+  border: 1px solid var(--grey-3);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .footer {
   width: 100%;
 }
