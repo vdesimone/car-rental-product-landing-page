@@ -48,7 +48,6 @@ html, body, #root {
   top: 0;
   background-color: var(--white);
   width: 100%;
-  color: var(--grey-5);
   padding: 1rem;
   z-index: 10;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -70,6 +69,15 @@ html, body, #root {
 }
 .navbar ul .active {
   color: var(--dark-blue);
+}
+.navbar ul li {
+  color: var(--grey-5);
+  transition: color 0.2s linear;
+}
+.navbar ul li:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+  transition: color 0.2s linear
 }
 .navbar.scrolled {
   box-shadow: 0 2px 10px hsla(0, 0, 33%, 0.25);
@@ -513,7 +521,123 @@ html, body, #root {
 
 .footer {
   width: 100%;
+  background-color: var(--dark-blue);
+  padding: 2rem 4rem;
+  color: var(--white);
 }
-.f-socials li {
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.f-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+.f-col:last-child {
+  margin-right: 0rem;
+}
+.f-logo {
+  font-size: 1.25rem;
+  font-weight: var(--font-bold);
+}
+.f-desc, .f-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey-2);
+}
+.f-socials {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  color: var(--white);
+  transition: color 0.2s ease-in-out;
+}
+.f-socials li, .f-links li {
   list-style: none;
+}
+.f-socials li a {
+  text-decoration: none;
+  position: relative;
+}
+.f-socials li a:link,
+.f-socials li a:visited,
+.f-socials li a:hover,
+.f-socials li a:active {
+  color: inherit;
+}
+.f-socials li a {
+  color: var(--white);
+  transition: color 0.1s linear;
+}
+.f-socials li a:hover {
+  color: var(--grey-3);
+}
+.f-title {
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+}
+.f-links {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.f-links li {
+  display: flex;
+}
+.f-links a:after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background: var(--grey-2);
+  display: block;
+  transition: all 0.3s;
+}
+.f-links a:hover:after {
+  width: 100%;
+  background: var(--white);
+  transition: all 0.3s;
+}
+.f-links a:hover {
+  color: var(--white);
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+
+.watermark p {
+  color: var(--white);
+  font-weight: var(--font-medium);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.watermark p:hover {
+  transform: scale(104%);
+}
+.watermark p a {
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+}
+.watermark p a:link,
+.watermark p a:visited,
+.watermark p a:hover,
+.watermark p a:active {
+  color: inherit;
+}
+.watermark p a:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1.5px solid var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.watermark p a:hover:after {
+  opacity: 1;
 }
